@@ -1,0 +1,106 @@
+
+body {
+  min-height: 100vh;
+  position: relative;
+  background-color: #f0f8ff; /* Softer background color */
+  width: 100%;
+  overflow: auto;
+  margin: 0;
+  padding-bottom: 30vh;  
+  /* // <uniquifier>: Use a unique and descriptive class name */
+/* // <weight>: Use a value from 200 to 800 */
+
+
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+ display: flex;
+ flex-direction: column;
+
+
+} /* Ensure there's space for the footer An element's padding area is the space between its content and its border.*/
+/* padding is important in body for footer */
+
+.navbar {
+  height: 5rem;
+  background-color: white;
+  border-bottom: 1px solid #ddd; /* Add a subtle border */
+}
+
+.fa-compass {
+  color: red;
+  font-size: 2rem;
+}
+
+.nav-link {
+  color: #222222 !important;
+}
+
+.f-info {
+  height: 20vh;
+  display: flex;
+ flex-direction: column;
+  align-items: center;
+  background-color: white;  /* Added background color for visibility */
+  position: fixed;
+  bottom: 0;
+  width: 100%;    /* Added width to ensure it spans the bottom */
+  border-top: 1px solid #ddd;
+  padding: 5px;
+
+}
+
+.f-info-socilmedia i {
+  font-size: 1.5rem;
+  margin: 0 10px;
+}
+/* card */
+.listing-card{
+  border: none;
+  margin-bottom:2rem;
+
+}
+.card-img-top{
+  border-radius:1rem !important;
+  width:100% !important;
+  object-fit: cover;    
+  /* cover the all over card remainng space */
+
+}
+.class-body{
+  padding:0 !important
+}
+.card-text p{
+  font-weight:400 !important;
+}
+.card-img-overlay{
+  opacity: 0;
+
+}
+.card-img-overlay:hover
+  {
+    opacity: 0.5  ;
+    background-color: #ddd;
+  }
+   /* //new page */
+ .add-btn{
+  background-color:#fe424d !important ;
+  border:none !important;
+
+ } 
+ /* edit page */
+ .edit-btn{
+  background-color:#fe424d !important ;
+  border:none !important;
+
+
+ }
+ /* show page */
+ .show-img{
+  height: 30vh;
+ }
+ .btn{
+  display: flex;
+ }
+ .show-card{
+  padding-left: 0;
+  padding-right: 0;
+ }

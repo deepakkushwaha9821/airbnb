@@ -1,0 +1,86 @@
+  <!-- < layout("/layouts/boilerplate")-%><%= success   %>
+
+  <h3>All Listings</h3>
+  <div class="row row-cols-lg-3 row-cols-md-3 row-cols-sm-1">
+    < for (let listing of allListings) { %>
+      <a href="/listings/<= listing._id %>" class="listing-link">
+        <div class="card col lisitng-card">
+          <img src="<= listing.image %>" class="card-img-top" alt="listing_image" style="height: 20rem;">
+          <div class="card-img-overlay">abcd</div>
+          <div class="card-body">
+            <p class="card-text">
+              <b><= listing.title %></b><br/>
+              <= listing.price.toLocaleString("en-IN") %> / night
+            </p>
+          </div>
+        </div>
+      </a>
+    <} %>
+  </div> -->
+
+  <!-- NOTES -->
+  <!-- % %> (Scriptlet) -->
+  <!-- This is used to embed JavaScript code that is not directly output to the client. -->
+  <!-- You can use it to declare variables, write if statements, loops, etc. -->
+
+  <!-- %= %> (Expression) -->
+  <!-- This is used to output the value of a JavaScript expression directly to the client. -->
+  <!-- It automatically converts the expression to a string and inserts it into the response. -->
+
+  <!--
+  <ul>
+    < for (let item of allListings) { %>
+      <li>
+        <a href="/listings/<= item._id %>"><= item.title %></a>
+      </li>
+    <} %>
+  </ul>
+  -->
+  <!-- Note: Ensure the correct EJS tags are used to prevent comment lines from being executed. -->
+  <!-- Backend needs "CRUD" operations -->
+  <% layout("/layouts/boilerplate") %>
+ 
+  
+  <h3>All Listings</h3>
+  <div class="row row-cols-lg-3 row-cols-md-3 row-cols-sm-1">
+    <% for (let listing of allListings) { %>
+      <a href="/listings/<%= listing._id %>" class="listing-link">
+        <div class="card col listing-card">
+          <img src="<%= listing.image %>" class="card-img-top" alt="listing_image" style="height: 20rem;">
+          <div class="card-img-overlay">abcd</div>
+          <div class="card-body">
+            <p class="card-text">
+              <b><%= listing.title %></b><br/>
+              <%= listing.price.toLocaleString("en-IN") %> / night
+            </p>
+          </div>
+        </div>
+      </a>
+    <% } %>
+  </div>
+  
+  <!-- NOTES -->
+  <!-- 
+    <% %> (Scriptlet): 
+    Used to embed JavaScript code that is not directly output to the client. 
+    You can use it to declare variables, write if statements, loops, etc.
+    
+    <%= %> (Expression):
+    Used to output the value of a JavaScript expression directly to the client.
+    It automatically converts the expression to a string and inserts it into the response.
+  -->
+  
+  <!-- 
+    Example of a commented-out EJS block:
+    <ul>
+      <% for (let item of allListings) { %>
+        <li>
+          <a href="/listings/<%= item._id %>"><%= item.title %></a>
+        </li>
+      <% } %>
+    </ul>
+  -->
+  
+  <!-- Note: Ensure the correct EJS tags are used to prevent comment lines from being executed. -->
+  <!-- Backend needs "CRUD" operations for full functionality. -->
+  
